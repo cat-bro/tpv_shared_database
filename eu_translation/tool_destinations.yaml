@@ -137,6 +137,7 @@ stress_ng: {runner: condor_singularity_with_conda}
 fasterq_dump: {cores: 8}
 
 busco: {cores: 16, mem: 80}
+orfipy: {cores: 8, mem: 8}
 nanoplot: {cores: 12}
 # roary	needs many many cpus if	the number of input files increase
 # a more specific function would ne neat
@@ -633,7 +634,7 @@ abims_xcms_retcor: {mem: 32}
 abims_CAMERA_annotateDiffreport: {mem: 32}
 abyss-pe: {cores: 20, mem: 70}
 anndata_export: {cores: 4}
-anndata_import: {cores: 4}
+anndata_import: {mem: 200}
 anndata_inspect: {cores: 4}
 anndata_manipulate: {cores: 4}
 antismash:
@@ -682,7 +683,7 @@ cat_bins: {mem: 24}  ## Diamond in the background
 chira_map: {cores: 10, mem: 80, runner: condor_singularity_with_conda}
 chira_merge: {cores: 1, mem: 60, runner: condor_singularity_with_conda}
 chira_quantify: {cores: 1, mem: 60, runner: condor_singularity_with_conda}
-chira_extract: {cores: 24, mem: 60, runner: condor_singularity_with_conda}
+chira_extract: {cores: 24, mem: 100, runner: condor_singularity_with_conda}
 canu: {cores: 20, mem: 92}
 mass_spectrometry_imaging_preprocessing: {mem: 110}
 mass_spectrometry_imaging_ion_images: {mem: 20}
@@ -826,7 +827,7 @@ hicexplorer_hicfindtads: {mem: 20}
 hicexplorer_hicplotmatrix: {mem: 64}
 hicexplorer_hicplottads: {mem: 64}
 hicexplorer_hicsummatrices: {mem: 64}
-hicexplorer_hicpca: {cores: 10, mem: 60}
+hicexplorer_hicpca: {cores: 10, mem: 150}
 hicexplorer_hicmergematrixbins: {mem: 80}
 hicexplorer_hictransform: {cores: 10, mem: 60}
 hicexplorer_hicplotviewpoint: {mem: 12}
@@ -884,7 +885,7 @@ hyphy_meme: {cores: 20, mem: 10}
 hyphy_slac: {cores: 20, mem: 10}
 hyphy_fel: {cores: 20, mem: 10}
 hyphy_prime: {cores: 20}
-
+hypo: {cores: 8}
 
 infernal_cmbuild: {cores: 10, mem: 20}
 infernal_cmsearch: {cores: 10, mem: 20}

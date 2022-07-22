@@ -264,22 +264,6 @@ tools:
     mem: 18
   wig_to_bigWig:
     mem: 10
-  velvetg:
-    cores: 4
-    mem: 32
-    env:
-      OMP_NUM_THREADS: 4
-      OMP_THREAD_LIMIT: 4
-    context:
-      name: _velvetg
-  velveth:
-    cores: 4
-    mem: 16
-    env:
-      OMP_NUM_THREADS: 4
-      OMP_THREAD_LIMIT: 4
-    context:
-      name: _velveth
   CONVERTER_bedgraph_to_bigwig:
     mem: 8
   interactive_tool_hicbrowser:
@@ -389,6 +373,9 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/busco/busco/.*:
     cores: 16
     mem: 80
+  toolshed.g2.bx.psu.edu/repos/iuc/orfipy/orfipy/.*:
+    cores: 8
+    mem: 8
   toolshed.g2.bx.psu.edu/repos/iuc/nanoplot/nanoplot/.*:
     cores: 12
   toolshed.g2.bx.psu.edu/repos/iuc/roary/roary/.*:
@@ -1680,7 +1667,7 @@ tools:
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_export/anndata_export/.*:
     cores: 4
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_import/anndata_import/.*:
-    cores: 4
+    mem: 200
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_inspect/anndata_inspect/.*:
     cores: 4
   toolshed.g2.bx.psu.edu/repos/iuc/anndata_manipulate/anndata_manipulate/.*:
@@ -1770,7 +1757,7 @@ tools:
       - condor_singularity_with_conda
   toolshed.g2.bx.psu.edu/repos/iuc/chira_extract/chira_extract/.*:
     cores: 24
-    mem: 60
+    mem: 100
     scheduling:
       require:
       - condor_singularity_with_conda
@@ -1926,7 +1913,7 @@ tools:
     mem: 64
   toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicpca/hicexplorer_hicpca/.*:
     cores: 10
-    mem: 60
+    mem: 150
   toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hicmergematrixbins/hicexplorer_hicmergematrixbins/.*:
     mem: 80
   toolshed.g2.bx.psu.edu/repos/bgruening/hicexplorer_hictransform/hicexplorer_hictransform/.*:
@@ -2056,6 +2043,8 @@ tools:
     mem: 10
   toolshed.g2.bx.psu.edu/repos/iuc/hyphy_prime/hyphy_prime/.*:
     cores: 20
+  toolshed.g2.bx.psu.edu/repos/iuc/hypo/hypo/.*:
+    cores: 8
   toolshed.g2.bx.psu.edu/repos/bgruening/infernal/infernal_cmbuild/.*:
     cores: 10
     mem: 20
@@ -2486,6 +2475,22 @@ tools:
     mem: 12
   toolshed.g2.bx.psu.edu/repos/iuc/varscan_copynumber/varscan_copynumber/.*:
     mem: 12
+  toolshed.g2.bx.psu.edu/repos/devteam/velvet/velvetg/.*:
+    cores: 4
+    mem: 32
+    env:
+      OMP_NUM_THREADS: 4
+      OMP_THREAD_LIMIT: 4
+    context:
+      name: _velvetg
+  toolshed.g2.bx.psu.edu/repos/devteam/velvet/velveth/.*:
+    cores: 4
+    mem: 16
+    env:
+      OMP_NUM_THREADS: 4
+      OMP_THREAD_LIMIT: 4
+    context:
+      name: _velveth
   toolshed.g2.bx.psu.edu/repos/iuc/vsearch/vsearch_search/.*:
     mem: 80
   toolshed.g2.bx.psu.edu/repos/iuc/vsearch/vsearch_alignment/.*:
