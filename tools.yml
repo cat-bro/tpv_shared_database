@@ -1,4 +1,4 @@
-tools:
+tools: # commment
   default:
     cores: 1
     mem: cores * 3.8
