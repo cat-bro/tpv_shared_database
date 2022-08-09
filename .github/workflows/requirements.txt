@@ -1,0 +1,4 @@
+total-perspective-vortex==1.2.0
+pyyaml
+galaxy-data
+
