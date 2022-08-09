@@ -1,6 +1,6 @@
 name: Lint TPV config files
-env:
-  TPV_VERSION: '1.2.0'
+# env:
+#   TPV_VERSION: '1.2.0'
 # # Controls when the action will run. Triggers the workflow on push or pull request
 # # events but only for the master branch
 on:
@@ -28,6 +28,8 @@ jobs:
       with:
         python-version: 3.8
         cache: pip
+    - name: Install dependencies
+      run: pip install -r requirements.txt
     # Install python dependencies for check_files script
     # - name: Install dependencies
     #   run: |
